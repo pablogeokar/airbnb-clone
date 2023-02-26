@@ -4,7 +4,6 @@ import {
   GlobeAltIcon,
   Bars3Icon,
   UserCircleIcon,
-  UsersIcon,
 } from "@heroicons/react/24/solid";
 
 export function Header() {
@@ -16,8 +15,7 @@ export function Header() {
           alt="airbnb"
           src="https://links.papareact.com/qd3"
           fill
-          objectFit="contain"
-          objectPosition="left"
+          className="object-contain object-left"
         />
       </div>
 

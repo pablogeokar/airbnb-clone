@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Banner } from "../components/Banner";
+import { Footer } from "../components/Footer";
+import { LargeCard } from "../components/LargeCard";
 import { MediumCard } from "../components/MediumCard";
 import { SmallCard } from "../components/SmallCard";
 import { Header } from "./../components/Header";
@@ -49,13 +51,22 @@ const Home: NextPage = ({ exploreData, cardsData }: any) => {
 
         <section>
           <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
-          <div className="flex space-x-3 overflow-scroll">
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
             {cardsData?.map((item: any) => (
               <MediumCard key={item.img} title={item.title} img={item.img} />
             ))}
           </div>
         </section>
+
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          buttonText="Get Inspired"
+          title="The Greatest Outdoors"
+          description="Wishlists curated by Airbnb"
+        />
       </main>
+
+      <Footer />
     </div>
   );
 };
